@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+}
+.logo {
+  float: left;
+  height: 104px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #001643;
+  height: 104px;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.section_grid {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: cover;
+}
+
+.section_grid > div {
+  display: grid;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(min-content, max-content);
+}
+
+.section_1 {
+  background-image: url(pic/desktop/working_on_site.jpg);
+  color: black;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  max-height: 1192px;
+}
+
+.main_title_s1_new {
+width: 33%;
+}
+
+.section_1 > div {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main_title_s1_box1 {
+  grid-column: 1/3;
+  text-align: center;
+  font-size: 1em;
+  padding-right: 1em;
+  padding-top: 5em;
+}
+.main_title_s1_box1 h1 {
+  margin-bottom: 0;
+}
+.main_p {
+  text-align: right;
+  padding-left: 1em;
+}
+.bg_blank_s1_box2 {
+  grid-column: 2/3;
+}
+/* secondary title  */
+.secondary_title_s1_box4 h2 {
+  grid-column: 2/4;
+  text-align: right;
+  font-size: 2.5em;
+  padding-top: 1em;
+}
+.secondary_title_s1_box4 h3 {
+  text-align: right;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* media quarey */
+@media screen and (max-width: 992px) {
+  .logo {
+    float: left;
+    background-color: #001643;
+    padding-right: 0px;
+    height: 80px;
+    background-image: url(pic/mobile/ABS_LOGO_new.jpg);
+  }
+  .section_grid > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section_grid > div > div {
+    grid-column: auto;
+  }
+  /* new picture */
+  .section_1 {
+    background-image: url(pic/desktop/working_on_site.jpg);
+  }
+}
